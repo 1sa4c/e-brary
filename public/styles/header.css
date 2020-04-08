@@ -1,0 +1,110 @@
+.head-container {
+    background-color: #111;
+    margin-bottom: 150px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #111;
+    padding: 1%;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 2;
+}
+  
+.topnav a, span {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+}
+
+.topnav a {
+    font-family: 'Roboto', sans-serif;
+}
+  
+.topnav a:hover {
+    color: #eee;
+}
+  
+.topnav-centered a {
+    font-size: 50px;
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.topnav-right {
+    float: right;
+}
+
+.burger-menu-icon {
+    display: none;
+}
+
+.nav-show {
+    display: none;
+}
+
+@media screen and (max-width: 680px) {
+
+    .topnav a {
+        display: none;
+    }
+
+    .topnav-centered a {
+        display: block
+    }
+
+    .topnav {
+        top: -1px;
+        width: 102%;
+    }
+
+    .burger-menu-icon {
+        display: block;
+    }
+
+    .burger-menu-icon span {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .nav-show {
+        z-index: 3;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        width: 85%;
+        height: 100%;
+
+        transform: translateX(-101%);
+        transition: transform 100ms linear;
+    }
+    
+    .nav-show h1 {
+        color: #fff;
+        text-align: left;
+        padding: 7%;
+        margin: 0;
+        font-size: 20px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .burger-menu-icon-gold h1 {
+        text-align: left;
+        color: #fff;
+        font-size: 60px;
+        cursor: pointer;
+    }
+
+    .open {
+        transform: translateX(0);
+    }
+}

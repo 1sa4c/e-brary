@@ -1,0 +1,27 @@
+.form-books-container {
+    margin-bottom: 5%;
+}
+
+.form-books-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-books-container button {
+    padding: 2%;
+    background-color: #00000000;
+    border: none;
+}
+
+.form-books-container input {
+    padding: 1%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+
+label {
+    color: #fff;
+}
+

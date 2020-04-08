@@ -1,0 +1,25 @@
+<h1>Search books</h1>
+
+<div class="content-container">
+    <div class="form-books-container">
+        <form action="/books" method="GET">
+            <label>Title</label>
+            <input type="text" name="title" value="<%= searchFilters.title %>">
+
+            <label>Published after</label>
+            <input type="date" name="pubAfter" value="<%= searchFilters.pubAfter %>">
+
+            <label>Published before</label>
+            <input type="date" name="pubBefore" value="<%= searchFilters.pubBefore %>">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+
+<div class="books-container">
+<% books.forEach(book => { %>
+    <a class="book" href="/books/<%= book.id %>">
+        <img src="<%= cloudinary.url(`covers/${book.coverImage}`) %>">
+    </a>
+<% }) %>
+</div>
+</div>

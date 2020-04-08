@@ -1,0 +1,20 @@
+<div class="top">
+    <h1><%= author.name %></h1>
+    <div class="buttons">
+        <a href="/authors/<%= author.id %>/edit"><i class="fas fa-edit"></i></a>
+        <%- include('../partials/deleteForm', {url: `/authors/${author.id}/delete`}) %>
+    </div>
+</div>
+
+<div class="content-container">
+<% if(books.length > 0){ %>
+    <h2>Books</h2>
+    <div class="books-container">
+        <% books.forEach(book => { %>
+            <a class="book" href="/books/<%= book.id %>">
+                <img src="<%= cloudinary.url(`covers/${book.coverImage}`) %>">
+            </a>
+        <% }) %>
+    </div>
+<% } %>
+</div>

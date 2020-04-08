@@ -1,0 +1,31 @@
+.top-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.top-info img {
+    margin-bottom: 20px;
+}
+
+.basic-info {
+    margin-bottom: 20px;
+}
+
+.basic-info h3 {
+    color: #fff;
+}
+
+.description h3, p {
+    color: #fff;
+    text-align: justify;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons a {
+    font-family: 'Roboto';
+}

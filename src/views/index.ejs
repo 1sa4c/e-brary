@@ -1,0 +1,10 @@
+<h1>Recently added</h1>
+<div class="content-container">
+    <div class="books-container">
+        <% books.forEach(book => { %>
+            <a class="book" href="/books/<%= book.id %>">
+                <img src="<%= cloudinary.url(`covers/${book.coverImage}`) %>">
+            </a>
+        <% }) %>
+    </div>
+</div>

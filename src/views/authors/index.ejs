@@ -1,0 +1,20 @@
+<h1>Search authors</h1>
+
+<div class="content-container">
+    <div class="form-container">
+        <form action="/authors" method="GET">
+            <input type="text" placeholder="Author name" name="name" value="<%= searchFilters.name %>">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+
+<div class="grid-container">
+    <% authors.forEach(author => { %>
+        <div class="author-container">
+            <div class="author"><a href="/authors/<%= author.id %>"><%= author.name %></a></div>
+            <a href="/authors/<%= author.id %>/edit"><i class="fas fa-edit"></i></a>
+            <%- include('../partials/deleteForm.ejs', {url: `/authors/${author.id}/delete`}) %>
+        </div>
+    <% }) %>
+</div>
+</div>

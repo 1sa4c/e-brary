@@ -1,0 +1,30 @@
+.top h1 {
+    margin-bottom: 0
+}
+
+.buttons .fas{
+    color: #111;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.buttons {
+    display: flex;
+    margin-left: 10%;
+    margin-bottom: 40px;
+}
+
+button {
+    background-color: #00000000;
+    border: none;
+}
+
+button .fas:hover {
+    color: #777;
+    cursor: pointer;
+}
+
+.content-container h2 {
+    color: #fff;
+    margin-bottom: 5%;
+}

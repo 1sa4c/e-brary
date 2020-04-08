@@ -1,0 +1,78 @@
+.new-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.new-container input {
+    border-radius: 5px;
+}
+
+.new-container label {
+    font-size: 20px;
+}
+
+.form-item {
+    margin: 10px 5px;
+    color: #fff;
+}
+
+.new-container input[type=text] {
+    margin-bottom: 20px
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    color: #111;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: #ddd;
+}
+
+.inputfile + label {
+	cursor: pointer;
+}
+
+.file-container {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-container {
+    width: 100%;
+    text-align: center;
+}
+
+.new-description {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.new-description textarea {
+    resize: none;
+    border-radius: 5px;
+    width: 50%;
+    height: 100px;
+    font-size: 18px;
+    padding: 2%;
+    text-align: justify;
+}
+
+.new-description label {
+    font-size: 20px;
+}
