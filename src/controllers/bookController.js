@@ -98,7 +98,7 @@ router.put('/:id/edit', multipartMiddleware, async (req, res) => {
     let filePath = null
     let book
 
-    if(req.files.file) filePath = req.files.file.path
+    if(req.files.file.size > 0) filePath = req.files.file.path
     
     try {
         book = await Book.findById(req.params.id)
