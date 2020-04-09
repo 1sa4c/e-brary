@@ -41,7 +41,7 @@ router.get('/new', async (req, res) => {
 
 
 router.post('/new', multipartMiddleware, async (req, res) => {
-    const filePath = req.files.cover.path
+    const filePath = req.files.file.path
     const imgID = crypto.randomBytes(8).toString('hex')
     
     const book = new Book({
@@ -69,11 +69,6 @@ router.post('/new', multipartMiddleware, async (req, res) => {
         res.redirect(`/books/${newBook.id}`)
     } catch(err) {
         console.log(err)
-        /*if(book.coverImage){
-            fs.unlink(path.join(uploadPath, fileName), error => {
-                if(error) console.log(error)
-            })
-        }*/
         renderNewPage(res, book, true)
     }
 })
